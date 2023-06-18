@@ -3,7 +3,7 @@ services:
     build:
       context: app
       target: builder
-    ports: 
-      - '8082:80'
+    expose: 
+      - '80'
     volumes:
       - /home/ubuntu/docker/webapp:/var/www/html/
