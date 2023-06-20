@@ -7,3 +7,10 @@ services:
       - '80'
     volumes:
       - /home/ubuntu/docker/webapp:/var/www/html/
+    networks:
+      caddy_default:
+        ipv4_address: 172.18.0.6
+
+networks:
+  caddy_default:
+    external: true
