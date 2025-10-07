@@ -11,7 +11,7 @@ services:
     networks:
       caddy_default:
         ipv4_address: 172.18.0.30
-
+     restart: unless-stopped
 networks:
   caddy_default:
     external: true
