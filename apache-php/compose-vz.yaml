@@ -3,15 +3,20 @@ services:
     build:
       context: app
       target: builder
-    expose: 
-      - '80'
+
+    expose:
+      - "80"
+
     volumes:
       - /home/ubuntu/docker/llm/viczhang.com:/var/www/html
       - /home/ubuntu/docker/llm/viczhang.com-apache:/etc/apache2
+
     networks:
       caddy_default:
         ipv4_address: 172.18.0.30
-     restart: unless-stopped
+
+    restart: unless-stopped
+
 networks:
   caddy_default:
     external: true
